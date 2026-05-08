@@ -1,342 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jean Pinsolle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Pinsolle</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #222;
+            background-color: #ffffff;
+        }
 
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      color: #222;
-      background-color: #ffffff;
-      line-height: 1.7;
-    }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
 
-    .navbar {
-      background-color: white;
-      border-bottom: 1px solid #e5e5e5;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
+        h2 {
+            margin-top: 2em;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 0.2em;
+        }
 
-    .navbar-brand {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
+        a {
+            color: #0055aa;
+            text-decoration: none;
+        }
 
-    .nav-link {
-      color: #444 !important;
-      margin-left: 10px;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .main-container {
-      max-width: 1050px;
-      margin: auto;
-      padding-top: 90px;
-      padding-bottom: 60px;
-    }
+        .subtitle {
+            color: #555555;
+            margin-bottom: 1.5em;
+        }
 
-    .profile-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      margin-bottom: 60px;
-    }
+        .section {
+            margin-bottom: 2em;
+        }
 
-    .profile-text {
-      flex: 1 1 600px;
-      padding-right: 40px;
-    }
+        ul {
+            padding-left: 1.2em;
+        }
 
-    .profile-photo {
-      flex: 0 0 250px;
-      text-align: center;
-    }
+        li {
+            margin-bottom: 0.8em;
+        }
 
-    .profile-photo img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 1px solid #ddd;
-    }
+        .publication-title {
+            font-weight: bold;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #666;
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-    }
-
-    .social-links a {
-      color: #444;
-      font-size: 1.3rem;
-      margin-right: 15px;
-    }
-
-    .publication {
-      margin-bottom: 30px;
-    }
-
-    .publication-title {
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
-
-    .publication-authors {
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    .publication-venue {
-      color: #666;
-      font-style: italic;
-      font-size: 0.95rem;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 2px 8px;
-      margin-right: 8px;
-      margin-top: 8px;
-      font-size: 0.75rem;
-      border: 1px solid #bbb;
-      border-radius: 4px;
-      color: #555;
-    }
-
-    .footer {
-      margin-top: 80px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-      color: #888;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    a {
-      color: #1a4d8f;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .profile-section {
-        flex-direction: column-reverse;
-      }
-
-      .profile-text {
-        padding-right: 0;
-      }
-
-      .profile-photo {
-        margin-bottom: 30px;
-      }
-    }
-  </style>
+        .footer {
+            margin-top: 3em;
+            font-size: 0.9em;
+            color: #666666;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Jean Pinsolle</a>
+    <h1>Jean Pinsolle</h1>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#research">Research</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#publications">Publications</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#teaching">Teaching</a>
-        </li>
-
-      </ul>
+    <div class="subtitle">
+        Postdoctoral researcher at SONDRA (CentraleSupélec)
     </div>
-  </div>
-</nav>
-
-<div class="main-container">
-
-  <section id="about" class="profile-section">
-
-    <div class="profile-text">
-
-      <h1>Jean Pinsolle</h1>
-
-      <div class="subtitle">
-        PhD in Statistical Signal Processing and Machine Learning
-      </div>
-
-      <div class="social-links mb-4">
-        <a href="mailto:jean.pinsolle@email.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://scholar.google.com/" target="_blank"><i class="ai ai-google-scholar"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-
-      <p>
-        I am interested in statistical signal processing, inverse problems, optimization and modern generative models for signal and image processing.
-      </p>
-
-      <p>
-        My research focuses on the adaptation and analysis of probabilistic and machine learning methods for signal processing applications, with a particular interest in diffusion models, flow matching approaches and uncertainty quantification.
-      </p>
-
-      <p>
-        During my PhD, I worked on radar pulse deinterleaving problems, studying estimation methods for mixtures of stochastic processes together with discrete optimization heuristics for practical reconstruction algorithms.
-      </p>
-
-      <p>
-        More broadly, I am interested in the connections between statistical inference, stochastic modeling, inverse problems and learning-based approaches for signal processing.
-      </p>
-
-    </div>
-
-    <div class="profile-photo">
-      <img src="photo.jpg" alt="Profile photo">
-    </div>
-
-  </section>
-
-  <section id="research">
-
-    <h2>Research Interests</h2>
-
-    <span class="tag">Signal Processing</span>
-    <span class="tag">Inverse Problems</span>
-    <span class="tag">Diffusion Models</span>
-    <span class="tag">Flow Matching</span>
-    <span class="tag">Statistical Learning</span>
-    <span class="tag">Optimization</span>
-    <span class="tag">Bayesian Methods</span>
-    <span class="tag">Uncertainty Quantification</span>
-
-    <p class="mt-4">
-      My current interests include generative models for inverse problems, stochastic surrogate modeling, uncertainty quantification and statistical estimation for structured signals.
-    </p>
 
     <p>
-      I am particularly interested in understanding the theoretical properties of modern generative approaches and their connections with classical signal processing and Bayesian inference methods.
+        Email:
+        <a href="mailto:jean.pinsolle@centralesupelec.fr">
+            jean.pinsolle@centralesupelec.fr
+        </a>
     </p>
 
-  </section>
+    <div class="section">
+        <h2>Research interests</h2>
 
-  <section id="publications">
+        <p>
+            Statistical signal processing, machine learning,
+            inverse problems, anomaly detection,
+            optimization, diffusion models and flow matching.
+        </p>
 
-    <h2>Publications and Preprints</h2>
-
-    <div class="publication">
-
-      <div class="publication-title">
-        Estimation and Optimization Methods for Radar Pulse Deinterleaving
-      </div>
-
-      <div class="publication-authors">
-        Jean Pinsolle
-      </div>
-
-      <div class="publication-venue">
-        PhD Thesis, 2026
-      </div>
-
+        <p>
+            My current research focuses on the analysis and adaptation
+            of modern generative models for signal and image processing,
+            with interests in Bayesian methods, stochastic modeling,
+            uncertainty quantification and radar applications.
+        </p>
     </div>
 
-    <div class="publication">
+    <div class="section">
+        <h2>Current position</h2>
 
-      <div class="publication-title">
-        Generative Models for Statistical Signal Processing Problems
-      </div>
+        <p>
+            Since June 2025, I am a postdoctoral researcher at
+            SONDRA (CentraleSupélec / ONERA), funded by the ANR-NEPTUNE3 project.
+        </p>
 
-      <div class="publication-authors">
-        Jean Pinsolle
-      </div>
-
-      <div class="publication-venue">
-        Preprint, in preparation
-      </div>
-
+        <p>
+            I also participate in the co-supervision of research projects
+            related to anomaly detection and SAR image generation.
+        </p>
     </div>
 
-    <div class="publication">
+    <div class="section">
+        <h2>Education</h2>
 
-      <div class="publication-title">
-        Diffusion and Flow Matching Approaches for Inverse Problems
-      </div>
+        <ul>
+            <li>
+                <strong>PhD in Computer Science</strong>,
+                Université d'Angers / Thales DMS (2022–2025)
+                <br>
+                CIFRE PhD on radar pulse deinterleaving,
+                stochastic process mixtures and optimization methods.
+            </li>
 
-      <div class="publication-authors">
-        Jean Pinsolle
-      </div>
+            <li>
+                <strong>Master 2 CEPS – Applied Mathematics</strong>,
+                Aix-Marseille University (2020–2021)
+            </li>
 
-      <div class="publication-venue">
-        Preprint, in preparation
-      </div>
+            <li>
+                <strong>École Centrale de Marseille</strong> (2018–2021)
+                <br>
+                Research-oriented curriculum in mathematics for climate and life sciences.
+            </li>
 
+            <li>
+                <strong>Research internship</strong>,
+                Johns Hopkins University (2020)
+            </li>
+        </ul>
     </div>
 
-  </section>
+    <div class="section">
+        <h2>Publications</h2>
 
-  <section id="teaching">
+        <ul>
+            <li>
+                <span class="publication-title">
+                    Deinterleaving of Discrete Renewal Process Mixtures
+                    with Application to Electronic Support Measures
+                </span>
+                <br>
+                J. Pinsolle, O. Goudet, C. Enderli,
+                S. Lamprier, J.K. Hao
+                <br>
+                <em>IEEE Transactions on Signal Processing, 2024</em>
+            </li>
 
-    <h2>Teaching</h2>
+            <li>
+                <span class="publication-title">
+                    Experimental Comparison of Unsupervised Methods
+                    for Deinterleaving Pulse Trains
+                </span>
+                <br>
+                J. Pinsolle, O. Goudet, C. Enderli,
+                J.K. Hao, S. Lamprier
+                <br>
+                <em>International Radar Conference (RADAR), 2024</em>
+            </li>
 
-    <p>
-      I am interested in teaching signal processing, applied mathematics, probability, statistics and machine learning.
-    </p>
+            <li>
+                <span class="publication-title">
+                    A Memetic Algorithm for Deinterleaving Pulse Trains
+                </span>
+                <br>
+                J. Pinsolle, O. Goudet, C. Enderli, J.K. Hao
+                <br>
+                <em>EvoCOP, 2023</em>
+            </li>
 
-    <p>
-      I would particularly like to contribute to courses combining theoretical foundations and practical applications, ranging from classical signal processing methods to modern statistical learning approaches.
-    </p>
+            <li>
+                <span class="publication-title">
+                    Support Vector Data Description for Radar Target Detection
+                </span>
+                <br>
+                J. Pinsolle et al.
+                <br>
+                <em>ICASSP 2026</em>
+            </li>
+        </ul>
+    </div>
 
-    <p>
-      In the longer term, I would also like to develop specialized courses related to current research topics in signal processing and generative modeling.
-    </p>
+    <div class="section">
+        <h2>Teaching</h2>
 
-  </section>
+        <p>
+            Teaching activities at Polytech Paris-Saclay include
+            mathematics and Python practical sessions for undergraduate students.
+        </p>
 
-  <div class="footer">
-    © 2026 Jean Pinsolle
-  </div>
+        <p>
+            I am interested in teaching signal processing,
+            applied mathematics, statistics and machine learning,
+            from introductory courses to more advanced topics
+            related to modern generative models.
+        </p>
+    </div>
 
-</div>
+    <div class="section">
+        <h2>CV</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <p>
+            <a href="cv.pdf" target="_blank">
+                Download CV (PDF)
+            </a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Links</h2>
+
+        <ul>
+            <li>
+                <a href="https://scholar.google.com/" target="_blank">
+                    Google Scholar
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/" target="_blank">
+                    GitHub
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Last updated: May 2026
+    </div>
 
 </body>
 </html>
